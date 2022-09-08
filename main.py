@@ -17,6 +17,11 @@ class Password:
         password = list(password)
         shuffle(password)
         password = "".join(password[0:len])
+        
+        file = open("MyPasswords.txt", "a")
+        file.write("Pass:: " + password + "\n")
+        file.close
+        
         if show == 'y': print(password)
         
         
